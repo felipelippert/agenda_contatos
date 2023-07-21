@@ -3,10 +3,13 @@ const nomes = []
 const phones = []
 const spanSucesso = '<span class="sucesso">Contato adicionado com sucesso!</span>'
 
+
 let linhas = ''
 
 form.addEventListener('submit', function(e) {
     e.preventDefault()
+
+    
 
     adicionaLinha()
     atualizaTabela()
@@ -16,11 +19,13 @@ function adicionaLinha() {
     const nome = document.getElementById('nome')
     const phone = document.getElementById('phone')
 
+    
+
     if (nomes.includes(nome.value)) {
-        alert(`Atenção! Já existe um contato com esse nome:\nNome: ${nome.value}\nTelefone: ${phone.value}`)
+        mensagemErro()
     }
     else if (phones.includes(phone.value)) {
-        alert(`Atenção! Já existe um contato com esse número:\nNome: ${nome.value}\nTelefone: ${phone.value}`)
+        mensagemErro()
     }
     else {
 
@@ -47,5 +52,10 @@ function atualizaTabela() {
 }
 
 function mensagemSucesso() {
-document.getElementById('msg-sucesso').innerHTML = spanSucesso
+document.getElementById('msg-feedback').innerHTML = spanSucesso
+}
+
+function mensagemErro() {
+    const spanErro = `<span class="erro">Falhou.\nContato já existente.</span>`
+    document.getElementById('msg-feedback').innerHTML = spanErro
 }

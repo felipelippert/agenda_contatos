@@ -92,8 +92,14 @@ table td {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-span {
+span .sucesso {
     color: #00812b;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+span .erro {
+    color: red;
     font-size: 18px;
     font-weight: bold;
 }
