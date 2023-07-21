@@ -34,10 +34,10 @@ header h1 {
 
 form {
     display: flex;
-    max-width: 640px;
+    max-width: 800px;
     width: 100%;
-    justify-content: space-between;
     margin-bottom: 56px;
+
 }
 
 form input {
@@ -45,8 +45,17 @@ form input {
     font-weight: 500;
     border: none;
     border-bottom: 2px solid #000;
-    padding: 6px;
+    padding: 8px;
     border-radius: 2px;
+    margin-right: 16px;
+}
+
+#nome {
+    width: 500px;
+}
+
+#phone {
+    width: 250px;
 }
 
 form button{
@@ -58,8 +67,33 @@ form button{
     border-radius: 4px;
     cursor: pointer;
     padding: 8px;
+    max-width: 200px;
+}
+
+form button:hover {
+    background-color: rgb(12, 228, 156);
 }
 
 table {
     width: 100%;
+}
+
+table th {
+    padding: 16px;
+    border-bottom: 1px solid #000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+table td {
+    text-align: center;
+    font-size: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+span {
+    color: #00812b;
+    font-size: 18px;
+    font-weight: bold;
 }
